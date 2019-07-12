@@ -1,3 +1,5 @@
-### Relevant articles
+## Relevant Articles: 
 
-- [Guide to Elasticsearch in Java](http://www.baeldung.com/elasticsearch-java)
+Module | Article
+--|--
+elasticsearch-java-api | [Guide to Elasticsearch in Java](http://www.baeldung.com/elasticsearch-java)
