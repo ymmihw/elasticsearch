@@ -56,5 +56,6 @@
  <modules>
   <module>elasticsearch-java-api</module>
   <module>elasticsearch-container</module>
+  <module>elasticsearch-geospatial</module>
  </modules>
 </project>

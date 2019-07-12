@@ -1,13 +1,14 @@
 package com.ymmihw.elasticsearch;
 
 import java.util.List;
+import org.testcontainers.containers.wait.strategy.WaitStrategy;
 import org.testcontainers.elasticsearch.ElasticsearchContainer;
 
 public class MyElasticsearchContainer extends ElasticsearchContainer {
   private static final String IMAGE_VERSION = "elasticsearch:6.4.3";
   private static MyElasticsearchContainer container;
 
-  private MyElasticsearchContainer() {
+  public MyElasticsearchContainer() {
     super(IMAGE_VERSION);
   }
 

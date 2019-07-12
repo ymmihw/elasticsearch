@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <modelVersion>4.0.0</modelVersion>
+ <parent>
+  <groupId>com.ymmihw</groupId>
+  <artifactId>elasticsearch</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+ </parent>
+ <groupId>com.ymmihw.elasticsearch</groupId>
+ <artifactId>elasticsearch-geospatial</artifactId>
+ <name>elasticsearch-geospatial</name>
+ <url>http://maven.apache.org</url>
+ <properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ </properties>
+ <dependencies>
+  <dependency>
+   <groupId>org.locationtech.spatial4j</groupId>
+   <artifactId>spatial4j</artifactId>
+   <version>0.7</version>
+  </dependency>
+  <dependency>
+   <groupId>org.locationtech.jts</groupId>
+   <artifactId>jts-core</artifactId>
+   <version>1.16.1</version>
+  </dependency>
+  <dependency>
+   <groupId>com.ymmihw.elasticsearch</groupId>
+   <artifactId>elasticsearch-container</artifactId>
+   <version>0.0.1-SNAPSHOT</version>
+   <scope>test</scope>
+  </dependency>
+ </dependencies>
+</project>
