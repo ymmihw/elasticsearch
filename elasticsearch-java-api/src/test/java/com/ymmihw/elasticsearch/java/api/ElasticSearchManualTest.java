@@ -24,10 +24,14 @@ import org.elasticsearch.rest.RestStatus;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.junit.Before;
+import org.junit.ClassRule;
 import org.junit.Test;
 import com.alibaba.fastjson.JSON;
+import com.ymmihw.elasticsearch.MyElasticsearchContainer;
 
 public class ElasticSearchManualTest {
+  @ClassRule
+  public static MyElasticsearchContainer container = MyElasticsearchContainer.getInstance();
   private List<Person> listOfPersons = new ArrayList<>();
   private Client client = null;
 
@@ -39,8 +43,8 @@ public class ElasticSearchManualTest {
     listOfPersons.add(person2);
     Settings settings =
         Settings.builder().put("cluster.name", "elasticsearch").put("node.name", "fL6wjd2").build();
-    client = new PreBuiltTransportClient(settings)
-        .addTransportAddress(new TransportAddress(InetAddress.getByName("localhost"), 9300));
+    client = new PreBuiltTransportClient(settings).addTransportAddress(new TransportAddress(
+        InetAddress.getByName(container.getContainerIpAddress()), container.getMappedPort(9300)));
   }
 
   @Test
